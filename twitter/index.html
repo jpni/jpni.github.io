@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="https://abs.twimg.com/favicons/twitter.ico">
+<link rel="stylesheet" href="style.css">
+<meta property="og:title" content="twitter">
+<meta name="twitter:title" content="">
+<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://abs.twimg.com/responsive-web/client-web/icon-ios.8ea219d5.png">
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<a id="tweet" class="twitter-hashtag-button"></a>
+<p class="scs" id="light"><a class="twitter-timeline" data-chrome="noheader nofooter" data-lang="ja" href="//twitter.com/i/timelines/1428635422767284227"></a></p>
+<p class="scs" id="dark"><a class="twitter-timeline" data-chrome="noheader nofooter" data-lang="ja" data-theme="dark" href="//twitter.com/i/timelines/1428635422767284227"></a></p>
+<script>
+var link = window.location.host;
+var links = window.location.pathname;
+var tweets = '​桐生ココ';
+$('#tweet').attr('href','https://twitter.com/intent/tweet?hashtags=' + tweets + '%0A' + link + links);
+if(window.matchMedia('(prefers-color-scheme:light)').matches==true){$('#dark').hide();}if(window.matchMedia('(prefers-color-scheme:dark)').matches==true){$('#light').hide();}
+</script>
+</body>
+<script src="//platform.twitter.com/widgets.js"></script>
